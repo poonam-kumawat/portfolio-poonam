@@ -5,10 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './component/home-page/home-page.component';
 import { ResumeComponent } from './component/resume/resume.component';
+import { CssLoaderComponent } from './component/css-loader/css-loader.component';
 
 
 @NgModule({
-  declarations: [AppComponent, HomePageComponent, ResumeComponent],
+  declarations: [AppComponent, HomePageComponent, ResumeComponent, CssLoaderComponent],
   imports: [BrowserModule, AppRoutingModule],
   
 providers: [provideClientHydration()],
