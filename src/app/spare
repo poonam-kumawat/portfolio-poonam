@@ -1,0 +1,34 @@
+   <div class="w-[400px] bg-[#000] p-4  rotate-6 border-[#ddd] border-[1px] rounded-2xl">
+    <div class="">    
+
+        <p class="text-[#EEFF31] text-xs font-mono"><span class="text-[#5918DF]">class  </span> PoonamKumawat<span class="text-[#ffffff]"> &#123;</span></p>
+        <p class="text-[#ffffff] text-xs font-mono"><span class="text-[#5918DF]">constructor  </span>&#40;&#41;<span class="text-[#ffffff]"> &#123;</span></p>
+        <p class="text-[#E3244C]  text-xsfont-mono">this<span class="text-[#24E394]">.name</span><span class="text-[#E3244C]">&#61;</span><span class="text-[#24E394]">"Poonam Kumawat"</span><span class="text-[#ffffff]">&#59;</span></p>
+        <p class="text-[#E3244C] text-xs font-mono">this<span class="text-[#24E394]">.dateOfBirth</span><span class="text-[#E3244C]">&#61;</span><span class="text-[#24E394]">"05012002"</span><span class="text-[#ffffff]">&#59;</span></p>
+        <p class="text-[#E3244C] text-xs font-mono">this<span class="text-[#24E394]">.email</span><span class="text-[#E3244C]">&#61;</span><span class="text-[#24E394]">"mailpoonam2002&#64;gmail.com"</span><span class="text-[#ffffff]">&#59;</span></p>
+        <p class="text-[#ffffff] text-xs font-mono">&#125;</p>
+        <p class="text-[#EEFF31] text-xs font-mono">workExperince<span class="text-[#ffffff]"> &#123;</span></p>
+        <p class="text-[#ffffff] text-xs font-mono"><span class="text-[#5918DF]">return </span>&#91;</p>
+        <p class="text-[#ffffff] text-xs  font-mono">&#123;<span class="text-[#24E394]">'2023 : Present'</span> : <span class="text-[#24E394]">'Junior Software Engineer'</span>&#125;&#59;</p>
+        <p class="text-[#ffffff] text-xs font-mono">&#93;</p>
+        <p class="text-[#ffffff] text-xs font-mono">&#125;</p>
+        <!--  -->
+        <p class="text-[#EEFF31] text-xs font-mono">education<span class="text-[#ffffff]"> &#123;</span></p>
+        <p class="text-[#ffffff] text-xs font-mono"><span class="text-[#5918DF]">return </span>&#91;</p>
+        <p class="text-[#ffffff] text-xs font-mono">&#123;<span class="text-[#24E394]">'2021 : 2023'</span> : <span
+                class="text-[#24E394]">'Mumbai University- Master in Computer Applications'</span>&#125;,</p>
+        <p class="text-[#ffffff] text-xs font-mono">&#123;<span class="text-[#24E394]">'2028 : 2021'</span> : <span
+                class="text-[#24E394]">'Mumbai University- Bachelor in Information Technology'</span>&#125;,</p>
+                <p class="text-[#ffffff]  font-mono">&#93;</p>
+        <p class="text-[#ffffff]  font-mono">&#125;</p>
+        <!--  -->
+        <p class="text-[#EEFF31] text-xs font-mono">skills<span class="text-[#ffffff]"> &#123;</span></p>
+        <p class="text-[#ffffff] text-xs font-mono"><span class="text-[#5918DF]">return </span>&#91;</p>
+        <p class="text-[#ffffff] text-xs font-mono"><span class="text-[#24E394]">'HTML/CSS/JS','Angular','React','Nextjs',<br>'Bootstrap/Tailwind CSS', 'Typescript', 'Git/Github'</span>
+        &#59;</p>
+        <p class="text-[#ffffff] text-xs font-mono">&#93;</p>
+        <p class="text-[#ffffff] text-xs font-mono">&#125;</p>
+        <p class="text-[#ffffff] text-xs font-mono">&#125;</p>
+
+    </div>
+    </div>

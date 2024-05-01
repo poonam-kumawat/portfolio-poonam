@@ -21,9 +21,16 @@
     "@angular/platform-server": "^17.3.0",
     "@angular/router": "^17.3.0",
     "@angular/ssr": "^17.3.4",
+    "@types/aos": "^3.0.7",
+    "aos": "^3.0.0-beta.6",
     "express": "^4.18.2",
+    "jquery": "^3.7.1",
+    "ng2-pdf-viewer": "^10.0.0",
+    "pdfjs-dist": "^4.1.392",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
+    "typed-js": "^0.2.3",
+    "typewriter-effect": "^2.21.0",
     "zone.js": "~0.14.3"
   },
   "devDependencies": {
@@ -39,6 +46,8 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "~5.4.2"
+    "node-loader": "^2.0.0",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.4.5"
   }
 }
