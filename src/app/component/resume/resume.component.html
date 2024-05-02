@@ -1,17 +1,36 @@
 <!-- <p>resume works!</p> -->
 <div class="bg-[#1A191D]">
+    <div class="p-4 mb-10">
+        <img [routerLink]="['/home']" class="w-[60px] cursor-pointer p-4 bg-[#bea5f0] rounded-[50px]" src="./../../../assets/arrow-left.svg" />
+    </div>
+    <div class="mb-10 flex justify-center">
+        <button class=" flex items-center font-mono px-6 py-2 border text-white text-xl rounded-md border-[#7544D7] bg-[#7544D7] cursor-pointer font-bold">
+            Download
+      <img class="w-[20px] ml-5 cursor-pointer fill-[#fff]" src="./../../../assets/download-circle-outline.svg" />
+
+        </button>
+    </div>
     <div class="md:w-[50%] m-auto">
     <ngx-extended-pdf-viewer [src]="'assets/resume/poonamresume.pdf'" *ngIf="'assets/resume/poonamresume.pdf'" [showToolbar]="false"
         [showBorders]="false" 
         [backgroundColor]="'#1A191D'"
         [showVerticalScrollButton]="false" 
         [textLayer]="true" 
-        [pageViewMode]="'single'"
+        [pageViewMode]="'infinite-scroll'"
         [zoom]="undefined"
+        [height]="'100vh'"
        
             
         ></ngx-extended-pdf-viewer>
         </div>
 
-        <!-- [pageViewMode]="'infinite-scroll'" -->
+      <div class="mt-10">
+<section class="bg-[#1A191D]">
+    <div class="border-t-2 border-white p-8">
+        <p class="text-white text-xl font-mono">Poonam kunawat</p>
+        <p class="text-white text-xl font-mono">mailpoonam2002&#64;gmail.com</p>
+    </div>
+
+</section>
+      </div>
 </div>
