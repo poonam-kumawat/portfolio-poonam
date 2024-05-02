@@ -24,11 +24,16 @@ export class HomePageComponent implements OnInit {
     }, 2000);
   }
 
-
+ismobilenav=false;
   scrollToSection(sectionId: string) {
+    
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+   
+  }
+  onMobilenav(){
+    this.ismobilenav=!this.ismobilenav;
   }
 }
