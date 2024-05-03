@@ -1,7 +1,9 @@
 import { isPlatformBrowser } from '@angular/common';
 import { AfterViewInit, Component, Inject, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core';
 import AOS from 'aos';
+// import * as AOS from 'aos';
 import 'aos/dist/aos.css';
+// import { Typewriter } from 'typewriter-effect';
 
 
 @Component({
@@ -13,6 +15,7 @@ export class HomePageComponent implements OnInit {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
  
  cssLoader=true;
+ 
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
       AOS.init();
