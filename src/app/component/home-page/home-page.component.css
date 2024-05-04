@@ -8,6 +8,11 @@
     animation: mover 1s infinite alternate;
 }
 
+.name{
+    color: #EEFF31;
+
+}
+
 @-webkit-keyframes mover {
     0% {
         transform: translateY(0);
