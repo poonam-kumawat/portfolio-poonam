@@ -7,11 +7,12 @@ import { HomePageComponent } from './component/home-page/home-page.component';
 import { ResumeComponent } from './component/resume/resume.component';
 import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 import { CssLoaderComponent } from './component/css-loader/css-loader.component';
+import { NgxTypedJsModule } from 'ngx-typed-js';
 
 
 @NgModule({
   declarations: [AppComponent, HomePageComponent, ResumeComponent, CssLoaderComponent],
-  imports: [BrowserModule, AppRoutingModule,NgxExtendedPdfViewerModule],
+  imports: [BrowserModule, AppRoutingModule,NgxExtendedPdfViewerModule,NgxTypedJsModule],
   
 providers: [provideClientHydration()],
   bootstrap: [AppComponent],
