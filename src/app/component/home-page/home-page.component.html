@@ -1,5 +1,6 @@
 <app-css-loader [hidden]="!cssLoader"></app-css-loader>
-<div *ngIf="!ismobilenav">
+
+
 <div [hidden]="cssLoader">
     <div class="bg-[#1A191D]">
         <div class="flex justify-between items-center px-8 pb-4 pt-6 relative">
@@ -28,10 +29,10 @@
             <!-- <img class="w-[40px] cursor-pointer bg-[#1A191D] p-2 -ml-4" src="./../../../assets/close.svg" /> -->
             <div class="grid  gap-8 mt-6 p-6">
                 <p class="text-2xl text-white cursor-pointer font-mono">Home<span class="text-[#7544D7]">/></span></p>
-                <p class="text-2xl text-white cursor-pointer font-mono" (click)="scrollToSection('about')">About<span
-                        class="text-[#7544D7]">/></span></p>
-                <p class="text-2xl text-white cursor-pointer font-mono" (click)="scrollToSection('Projects')">Projects<span
-                        class="text-[#7544D7]">/></span></p>
+                <p class="text-2xl text-white cursor-pointer font-mono" (touchend)="scrollToSection('about');onMobilenav()">
+                    About<span class="text-[#7544D7]">/></span></p>
+                <p class="text-2xl text-white cursor-pointer font-mono" (click)="scrollToSection('Projects');onMobilenav()">
+                    Projects<span class="text-[#7544D7]">/></span></p>
                 <p class="text-2xl text-white cursor-pointer font-mono" (click)="scrollToSection('skills')">Skills<span
                         class="text-[#7544D7]">/></span></p>
                 <p class="text-2xl text-white cursor-pointer font-mono" (click)="scrollToSection('blogs')">Blogs<span
@@ -42,6 +43,7 @@
             </div>
         </div>
     </div>
+   
 <div class="md:px-10 bg-[#1A191D]">
  
 <section class="md:h-screen bg-[#1A191D] ">
@@ -81,7 +83,7 @@
         </div>
         <div>
             <img class="" src="./../../../assets/coding-animate.svg" />
-                <!-- <img class="" src="./../../../assets/hand.svg" /> -->
+                <!-- <img class="" src="./../../../assets/hand-coding-animate.svg" /> -->
                 <!-- <div class="h-[300px] bg-[#000] rounded-[20px] border-white border z-10">
                 </div> -->
 
@@ -112,8 +114,8 @@
 
         
     </div>
-    <div  data-aos="fade-left" class=" w-[300px] md:w-[400px] h-[500px] bg-[#1A191D] p-4 border-[#ddd] border-[1px] rounded-xl -scale-x-100 vert-move" >
-<div class="w-[300px] md:w-[400px] h-[500px] bg-[#1A191D]   border-[#ddd] border-[1px] rounded-xl scale-x-100" >    
+    <div  data-aos="zoom-in" class=" w-[300px] md:w-[400px] h-[500px] bg-[#1A191D] p-4 border-[#ddd] border-[1px] rounded-xl -scale-x-100 vert-move" >
+<div  data-aos="zoom-in" class="w-[300px] md:w-[400px] h-[500px] bg-[#1A191D]   border-[#ddd] border-[1px] rounded-xl scale-x-100" >    
     <div class="border-b-2 py-2 border-white">
         <div class="flex items-center gap-2 justify-end px-2">
             <p class="p-2 rounded-[50px] bg-[#fd5e59]"></p>
@@ -137,7 +139,7 @@
         <p class="text-5xl text-white cursor-pointer font-mono" data-aos="fade-up">Projects<span class="text-[#7544D7]">/></span></p>
     </div>
     <div class="py-8 md:p-10 md:flex justify-between">
-        <div data-aos="fade-up" class="md:w-[400px] mb-10 md:mb-0 bg-[#1A191D] hover:shadow-2xl hover:shadow-[#7544D7] p-6 border-[#ddd] border-[1px] rounded-2xl duration-200 ease-in-out hover:-translate-y-1">
+        <div data-aos="zoom-in" class="md:w-[400px] mb-10 md:mb-0 bg-[#1A191D] hover:shadow-2xl hover:shadow-[#7544D7] p-6 border-[#ddd] border-[1px] rounded-2xl duration-200 ease-in-out hover:-translate-y-1">
          <p class="text-white text-3xl font-mono mb-6">Scape</p>
          <div class="flex gap-4 flex-wrap">
          <p class="bg-[#1A191D] border-[#ddd] py-2 px-4 border-[1px] rounded-[50px]  text-xs text-white font-mono">Nextjs</p>
@@ -153,7 +155,7 @@
             <img class="rounded-xl" src="./../../../assets/scape.svg" />
         </div>
     </div>
-    <div data-aos="fade-up" class="md:w-[400px] mb-10 md:mb-0 bg-[#1A191D] hover:shadow-2xl hover:shadow-[#7544D7] p-6 border-[#ddd] border-[1px] rounded-2xl duration-200 ease-in-out hover:-translate-y-1">
+    <div data-aos="zoom-in" class="md:w-[400px] mb-10 md:mb-0 bg-[#1A191D] hover:shadow-2xl hover:shadow-[#7544D7] p-6 border-[#ddd] border-[1px] rounded-2xl duration-200 ease-in-out hover:-translate-y-1">
         <p class="text-white text-3xl font-mono mb-6">Zest</p>
         <div class="flex gap-4 flex-wrap">
             <p class="bg-[#1A191D] border-[#ddd] py-2 px-4 border-[1px] rounded-[50px]  text-xs text-white font-mono">Reactjs
@@ -173,7 +175,7 @@
             <img class="rounded-xl" src="./../../../assets/zest.svg" />
         </div>
     </div>
-    <div data-aos="fade-up" class="md:w-[400px] mb-10 md:mb-0 bg-[#1A191D] hover:shadow-2xl hover:shadow-[#7544D7] p-6 border-[#ddd] border-[1px] rounded-2xl    duration-200 ease-in-out hover:-translate-y-1">
+    <div data-aos="zoom-in" class="md:w-[400px] mb-10 md:mb-0 bg-[#1A191D] hover:shadow-2xl hover:shadow-[#7544D7] p-6 border-[#ddd] border-[1px] rounded-2xl    duration-200 ease-in-out hover:-translate-y-1">
         <p class="text-white text-3xl font-mono mb-6">YoutubeSave</p>
         <div class="flex gap-4 flex-wrap">
             <p class="bg-[#1A191D] border-[#ddd] py-2 px-4 border-[1px] rounded-[50px]  text-xs text-white font-mono">Reactjs
@@ -327,7 +329,7 @@
 
         <div class="md:flex justify-between gap-10 mt-10">
             <a href="https://poonamkumawat.medium.com/a-new-era-of-ai-introducing-the-next-generation-of-artificial-intelligence-tools-edbddd92eb1b" target="_blank">
-            <div data-aos="fade-left" class="flex flex-col justify-center">
+            <div data-aos="fade-right" class="flex flex-col justify-center">
                 <div
                     class="group mb-10 md:mb-0 relative cursor-pointer bg-[#1e1f22] hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] p-2 md:p-6  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
                     <span class="p-8 bg-[#7544D7] absolute left-0 bottom-0 rounded-tr-[25px]"></span>
@@ -344,7 +346,7 @@
             </div>
             </a>
             <a href="https://poonamkumawat.medium.com/maximizing-jenkins-efficiency-a-step-by-step-guide-to-setting-up-master-slave-configuration-bdc62e357543" target="_blank">
-            <div data-aos="fade-left" class="flex flex-col justify-center">
+            <div data-aos="fade-right" class="flex flex-col justify-center">
                 <div
                     class="group relative cursor-pointer bg-[#1e1f22] hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] p-2 md:p-6  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
                     <span class="p-8 bg-[#7544D7] absolute left-0 bottom-0 rounded-tr-[25px]"></span>
