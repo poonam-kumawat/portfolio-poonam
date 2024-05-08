@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,10 +11,20 @@ import { NgxTypedJsModule } from 'ngx-typed-js';
 
 
 @NgModule({
-  declarations: [AppComponent, HomePageComponent, ResumeComponent, CssLoaderComponent],
-  imports: [BrowserModule, AppRoutingModule,NgxExtendedPdfViewerModule,NgxTypedJsModule],
-  
-providers: [provideClientHydration()],
+  declarations: [
+    AppComponent,
+    HomePageComponent,
+    ResumeComponent,
+    CssLoaderComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgxExtendedPdfViewerModule,
+    NgxTypedJsModule,
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  providers: [provideClientHydration()],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -138,8 +138,15 @@
     <div class="flex justify-center items-center">
         <p class="text-5xl text-white cursor-pointer font-mono" data-aos="fade-up">Projects<span class="text-[#7544D7]">/></span></p>
     </div>
+       
     <div class="py-8 md:p-10 md:flex justify-between">
-        <div data-aos="zoom-in" class="md:w-[400px] mb-10 md:mb-0 bg-[#1A191D] hover:shadow-2xl hover:shadow-[#7544D7] p-6 border-[#ddd] border-[1px] rounded-2xl duration-200 ease-in-out hover:-translate-y-1">
+        <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true" 
+            slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="50"
+            coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true" class="w-[auto]  md:w-[100%]">
+            <!-- <swiper-container effect="cards" grab-cursor="true" class="w-[auto] mx-5 md:w-[500px]"> -->
+            <!-- <swiper-container navigation="true" space-between="20" class="w-[auto]  md:w-[100%]"> -->
+<swiper-slide class="flex justify-center">
+        <div data-aos="zoom-in" class="md:w-[500px] mb-10 md:mb-0 bg-[#1A191D] hover:shadow-2xl hover:shadow-[#7544D7] p-6 border-[#ddd] border-[1px] rounded-2xl duration-200 ease-in-out hover:-translate-y-1">
          <p class="text-white text-3xl font-mono mb-6">Scape</p>
          <div class="flex gap-4 flex-wrap">
          <p class="bg-[#1A191D] border-[#ddd] py-2 px-4 border-[1px] rounded-[50px]  text-xs text-white font-mono">Nextjs</p>
@@ -151,11 +158,13 @@
     </div>
         <p class="text-white font-mono text-[14px] mt-6">Scape is a cutting-edge chat application that brings people together through intuitive and dynamic communication
         features.</p>
-        <div class="mt-6 cursor-pointer border-[#ddd] border-[1px] rounded-xl ">
-            <img class="rounded-xl" src="./../../../assets/scape.svg" />
+        <div class="mt-6 cursor-pointer border-[#ddd] border-[1px] rounded-xl  ">
+            <a href="https://scape-chat.vercel.app/"><img class="rounded-xl  hover:scale-150 hover:-translate-y-32 transition ease-in-out delay-150" src="./../../../assets/scape.svg" /></a>
         </div>
     </div>
-    <div data-aos="zoom-in" class="md:w-[400px] mb-10 md:mb-0 bg-[#1A191D] hover:shadow-2xl hover:shadow-[#7544D7] p-6 border-[#ddd] border-[1px] rounded-2xl duration-200 ease-in-out hover:-translate-y-1">
+    </swiper-slide>
+    <swiper-slide  class="flex justify-center">
+    <div data-aos="zoom-in" class="md:w-[500px] mb-10 md:mb-0 bg-[#1A191D] hover:shadow-2xl hover:shadow-[#7544D7] p-6 border-[#ddd] border-[1px] rounded-2xl duration-200 ease-in-out hover:-translate-y-1">
         <p class="text-white text-3xl font-mono mb-6">Zest</p>
         <div class="flex gap-4 flex-wrap">
             <p class="bg-[#1A191D] border-[#ddd] py-2 px-4 border-[1px] rounded-[50px]  text-xs text-white font-mono">Reactjs
@@ -172,10 +181,12 @@
         <p class="text-white font-mono text-[14px] mt-6">Zest is a feature-rich ecommerce grocery website developed to provide users with a seamless shopping experience for
         their daily essentials.</p>
         <div class="mt-6 cursor-pointer border-[#ddd] border-[1px] rounded-xl ">
-            <img class="rounded-xl" src="./../../../assets/zest.svg" />
+            <a href="https://zest-organic.vercel.app/" target="_blank"><img class="rounded-xl hover:scale-150 hover:-translate-y-32 transition ease-in-out delay-150" src="./../../../assets/zest.svg" /></a>
         </div>
     </div>
-    <div data-aos="zoom-in" class="md:w-[400px] mb-10 md:mb-0 bg-[#1A191D] hover:shadow-2xl hover:shadow-[#7544D7] p-6 border-[#ddd] border-[1px] rounded-2xl    duration-200 ease-in-out hover:-translate-y-1">
+    </swiper-slide>
+    <swiper-slide  class="flex justify-center">
+    <div data-aos="zoom-in" class="md:w-[500px] mb-10 md:mb-0 bg-[#1A191D] hover:shadow-2xl hover:shadow-[#7544D7] p-6 border-[#ddd] border-[1px] rounded-2xl    duration-200 ease-in-out hover:-translate-y-1">
         <p class="text-white text-3xl font-mono mb-6">YoutubeSave</p>
         <div class="flex gap-4 flex-wrap">
             <p class="bg-[#1A191D] border-[#ddd] py-2 px-4 border-[1px] rounded-[50px]  text-xs text-white font-mono">Reactjs
@@ -190,9 +201,36 @@
             together through intuitive and dynamic communication
             features.</p>
         <div class="mt-6 cursor-pointer border-[#ddd] border-[1px] rounded-xl ">
-            <img class="rounded-xl" src="./../../../assets/youtubesave.svg" />
+            <img class="rounded-xl hover:scale-150 hover:-translate-y-32 transition ease-in-out delay-150" src="./../../../assets/youtubesave.svg" />
         </div>
     </div>
+    </swiper-slide>
+    <swiper-slide class="flex justify-center">
+        <div data-aos="zoom-in"
+            class="md:w-[500px] mb-10 md:mb-0 bg-[#1A191D] hover:shadow-2xl hover:shadow-[#7544D7] p-6 border-[#ddd] border-[1px] rounded-2xl    duration-200 ease-in-out hover:-translate-y-1">
+            <p class="text-white text-3xl font-mono mb-6">Sparky</p>
+            <div class="flex gap-4 flex-wrap">
+                <p class="bg-[#1A191D] border-[#ddd] py-2 px-4 border-[1px] rounded-[50px]  text-xs text-white font-mono">
+                    Reactjs
+                </p>
+                <p class="bg-[#1A191D] border-[#ddd] py-2 px-4 border-[1px] rounded-[50px]  text-xs text-white font-mono">
+                    Express js
+                </p>
+                <p class="bg-[#1A191D] border-[#ddd] py-2 px-4 border-[1px] rounded-[50px]  text-xs text-white font-mono">
+                    Tailwind CSS
+                </p>
+    
+            </div>
+            <p class="text-white font-mono text-[14px] mt-6">Scape is a cutting-edge chat application that brings people
+                together through intuitive and dynamic communication
+                features.</p>
+            <div class="mt-6 cursor-pointer border-[#ddd] border-[1px] rounded-xl ">
+                <img class="rounded-xl hover:scale-150 hover:-translate-y-32 transition ease-in-out delay-150" src="./../../../assets/sparky.png" />
+            </div>
+        </div>
+    </swiper-slide>
+        </swiper-container>
+
         
 
     </div>
