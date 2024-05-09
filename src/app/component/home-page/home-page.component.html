@@ -8,7 +8,6 @@
                 <p class="text-white text-3xl font-bold font-mono">Poonam Kumawat</p>
             </div>
             <div class="hidden md:flex justify-center gap-8 items-center">
-                <p class="text-2xl text-white cursor-pointer font-mono">Home<span class="text-[#7544D7]">/></span></p>
                 <p class="text-2xl text-white cursor-pointer font-mono" (click)="scrollToSection('about')">About<span
                         class="text-[#7544D7]">/></span></p>
                 <p class="text-2xl text-white cursor-pointer font-mono" (click)="scrollToSection('Projects')">Projects<span
@@ -28,7 +27,7 @@
         <div *ngIf="ismobilenav" class="bg-[#1A191D] h-[100vh] w-full z-10  absolute md:hidden">
             <!-- <img class="w-[40px] cursor-pointer bg-[#1A191D] p-2 -ml-4" src="./../../../assets/close.svg" /> -->
             <div class="grid  gap-8 mt-6 p-6">
-                <p class="text-2xl text-white cursor-pointer font-mono">Home<span class="text-[#7544D7]">/></span></p>
+                <!-- <p class="text-2xl text-white cursor-pointer font-mono">Home<span class="text-[#7544D7]">/></span></p> -->
                 <p class="text-2xl text-white cursor-pointer font-mono" (touchend)="scrollToSection('about');onMobilenav()">
                     About<span class="text-[#7544D7]">/></span></p>
                 <p class="text-2xl text-white cursor-pointer font-mono" (click)="scrollToSection('Projects');onMobilenav()">
@@ -47,24 +46,7 @@
 <div class="md:px-10 bg-[#1A191D]">
  
 <section class="md:h-screen bg-[#1A191D] ">
-    <!-- Header -->
-    <!-- <div class="flex justify-between items-center px-8 pt-6 sticky">
-        <div>
-            <p class="text-white text-3xl font-bold font-mono">Poonam Kumawat</p>
-        </div>
-        
-        <div class="flex justify-center gap-8 items-center">
-        <p class="text-2xl text-white cursor-pointer font-mono">Home<span class="text-[#7544D7]">/></span></p>
-        <p class="text-2xl text-white cursor-pointer font-mono" (click)="scrollToSection('about')">About<span class="text-[#7544D7]">/></span></p>
-        <p class="text-2xl text-white cursor-pointer font-mono" (click)="scrollToSection('Projects')">Projects<span class="text-[#7544D7]">/></span></p>
-        <p class="text-2xl text-white cursor-pointer font-mono" (click)="scrollToSection('skills')">Skills<span class="text-[#7544D7]">/></span></p>
-        <p class="text-2xl text-white cursor-pointer font-mono" (click)="scrollToSection('blogs')">Blogs<span class="text-[#7544D7]">/></span></p>
-    <button class="font-mono px-6 py-2 border text-white text-xl rounded-[50px] border-[#7544D7] bg-[#7544D7] cursor-pointer font-bold" [routerLink]="['/resume']">Resume</button>    
-    </div>
-    </div> -->
-    
-    
-    
+   
     <!-- Section1 -->
     <div class="grid md:grid-cols-2 px-5 md:px-24 justify-center items-center">
         <div class="pt-28 md:pt-0">
@@ -140,14 +122,27 @@
     </div>
        
     <div class="py-8 md:p-10 md:flex justify-between">
-        <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true" 
-            slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="50"
+        <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true" style="--swiper-pagination-color: #fff"
+            slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="50" pagination-clickable="true"
             coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true" class="w-[auto]  md:w-[100%]">
-            <!-- <swiper-container effect="cards" grab-cursor="true" class="w-[auto] mx-5 md:w-[500px]"> -->
+<!-- 
+            <swiper-container class="mySwiper" pagination="true" effect="cube" grab-cursor="true" cube-effect-shadow="true"
+                cube-effect-slide-shadows="true" cube-effect-shadow-offset="20" cube-effect-shadow-scale="0.94" class="w-[auto]  md:w-[100%]"> -->
+            
+            <!-- <swiper-container effect="cards" grab-cursor="true" class="w-[auto]  md:w-[500px]"> -->
             <!-- <swiper-container navigation="true" space-between="20" class="w-[auto]  md:w-[100%]"> -->
 <swiper-slide class="flex justify-center">
         <div data-aos="zoom-in" class="md:w-[500px] mb-10 md:mb-0 bg-[#1A191D] hover:shadow-2xl hover:shadow-[#7544D7] p-6 border-[#ddd] border-[1px] rounded-2xl duration-200 ease-in-out hover:-translate-y-1">
-         <p class="text-white text-3xl font-mono mb-6">Scape</p>
+         <div class="flex justify-between items-baseline">
+            <p class="text-white text-3xl font-mono mb-6">Scape</p>
+                        <a href="https://github.com/poonam-kumawat/scape-frontend" target="_blank">
+            <img class="w-[30px] h-[30px] cursor-pointer grayscale-[50%] hover:grayscale-0 hover:scale-150 hover:bg-[#ebebeb] hover:rounded-[50px]"
+                                src="./../../../assets/github.svg" />
+            <!-- <button class="font-mono px-6 py-2 border text-white text-xl rounded-[50px] border-[#7544D7] bg-[#7544D7] cursor-pointer font-bold">Github</button> -->
+            </a>
+
+         </div>
+            
          <div class="flex gap-4 flex-wrap">
          <p class="bg-[#1A191D] border-[#ddd] py-2 px-4 border-[1px] rounded-[50px]  text-xs text-white font-mono">Nextjs</p>
          <p class="bg-[#1A191D] border-[#ddd] py-2 px-4 border-[1px] rounded-[50px]  text-xs text-white font-mono">Nestjs</p>
@@ -165,7 +160,16 @@
     </swiper-slide>
     <swiper-slide  class="flex justify-center">
     <div data-aos="zoom-in" class="md:w-[500px] mb-10 md:mb-0 bg-[#1A191D] hover:shadow-2xl hover:shadow-[#7544D7] p-6 border-[#ddd] border-[1px] rounded-2xl duration-200 ease-in-out hover:-translate-y-1">
+       
+       <div class="flex justify-between items-baseline">
         <p class="text-white text-3xl font-mono mb-6">Zest</p>
+        <a href="https://github.com/poonam-kumawat/zest-frontend" target="_blank">
+            <img class="w-[30px] h-[30px] cursor-pointer grayscale-[50%] hover:grayscale-0 hover:scale-150 hover:bg-[#ebebeb] hover:rounded-[50px]"
+                src="./../../../assets/github.svg" />
+            <!-- <button class="font-mono px-6 py-2 border text-white text-xl rounded-[50px] border-[#7544D7] bg-[#7544D7] cursor-pointer font-bold">Github</button> -->
+        </a>
+       </div>
+        
         <div class="flex gap-4 flex-wrap">
             <p class="bg-[#1A191D] border-[#ddd] py-2 px-4 border-[1px] rounded-[50px]  text-xs text-white font-mono">Reactjs
             </p>
@@ -187,7 +191,15 @@
     </swiper-slide>
     <swiper-slide  class="flex justify-center">
     <div data-aos="zoom-in" class="md:w-[500px] mb-10 md:mb-0 bg-[#1A191D] hover:shadow-2xl hover:shadow-[#7544D7] p-6 border-[#ddd] border-[1px] rounded-2xl    duration-200 ease-in-out hover:-translate-y-1">
-        <p class="text-white text-3xl font-mono mb-6">YoutubeSave</p>
+        <div class="flex justify-between items-baseline">
+         <p class="text-white text-3xl font-mono mb-6">YoutubeSave</p>
+        <a href="https://github.com/poonam-kumawat/Youtube_Video_Downloader" target="_blank">
+            <img class="w-[30px] h-[30px] cursor-pointer grayscale-[50%] hover:grayscale-0 hover:scale-150 hover:bg-[#ebebeb] hover:rounded-[50px]"
+                src="./../../../assets/github.svg" />
+            <!-- <button class="font-mono px-6 py-2 border text-white text-xl rounded-[50px] border-[#7544D7] bg-[#7544D7] cursor-pointer font-bold">Github</button> -->
+        </a>
+        </div>
+        
         <div class="flex gap-4 flex-wrap">
             <p class="bg-[#1A191D] border-[#ddd] py-2 px-4 border-[1px] rounded-[50px]  text-xs text-white font-mono">Reactjs
             </p>
@@ -208,7 +220,14 @@
     <swiper-slide class="flex justify-center">
         <div data-aos="zoom-in"
             class="md:w-[500px] mb-10 md:mb-0 bg-[#1A191D] hover:shadow-2xl hover:shadow-[#7544D7] p-6 border-[#ddd] border-[1px] rounded-2xl    duration-200 ease-in-out hover:-translate-y-1">
+            <div class="flex justify-between items-baseline">
             <p class="text-white text-3xl font-mono mb-6">Sparky</p>
+            <a href="https://github.com/poonam-kumawat/sparky" target="_blank">
+                <img class="w-[30px] h-[30px] cursor-pointer grayscale-[50%] hover:grayscale-0 hover:scale-150 hover:bg-[#ebebeb] hover:rounded-[50px]"
+                    src="./../../../assets/github.svg" />
+                <!-- <button class="font-mono px-6 py-2 border text-white text-xl rounded-[50px] border-[#7544D7] bg-[#7544D7] cursor-pointer font-bold">Github</button> -->
+            </a>
+            </div>
             <div class="flex gap-4 flex-wrap">
                 <p class="bg-[#1A191D] border-[#ddd] py-2 px-4 border-[1px] rounded-[50px]  text-xs text-white font-mono">
                     Reactjs
@@ -225,7 +244,7 @@
                 together through intuitive and dynamic communication
                 features.</p>
             <div class="mt-6 cursor-pointer border-[#ddd] border-[1px] rounded-xl ">
-                <img class="rounded-xl hover:scale-150 hover:-translate-y-32 transition ease-in-out delay-150" src="./../../../assets/sparky.png" />
+                <a href="https://sparky-9f2fa.web.app/" target="_blank"><img class="rounded-xl hover:scale-150 hover:-translate-y-32 transition ease-in-out delay-150" src="./../../../assets/sparky.png" /></a>
             </div>
         </div>
     </swiper-slide>
@@ -241,10 +260,10 @@
     <p class="text-5xl text-white cursor-pointer font-mono" data-aos="fade-up">Skills<span class="text-[#7544D7]">/></span></p>
 </div>
     <div class="py-10 md:p-10">
-        <div data-aos="fade-up" class=" grid grid-cols-3 gap-4 md:flex justify-evenly">
+        <div data-aos="fade-up" class=" grid grid-cols-2 gap-8 md:flex justify-evenly">
             <div class="flex flex-col justify-center text-center">
                 <div
-                    class="group cursor-pointer bg-[#1e1f22] hover:grayscale-0 hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7]  p-4 md:p-12  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
+                    class="flex justify-center group cursor-pointer bg-[#1e1f22] hover:grayscale-0 hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7]  p-4 md:p-12  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
                     <img class="grayscale-[90%] group-hover:grayscale-0 " src="./../../../assets/Figma-logo.svg" />
                 </div>
                 <p class="text-xl md:text-2xl mt-4 font-mono text-[#8750f7] hover:text-white">Figma</p>
@@ -252,45 +271,45 @@
 
             <div class="flex flex-col justify-center text-center">
                 <div
-                    class="group cursor-pointer bg-[#1e1f22] hover:grayscale-0 hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] p-4 md:p-12  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
+                    class="flex justify-center group cursor-pointer bg-[#1e1f22] hover:grayscale-0 hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] p-4 md:p-12  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
                     <img class="grayscale-[90%] group-hover:grayscale-0 " src="./../../../assets/html-5.svg" />
                 </div>
                 <p class="text-xl md:text-2xl mt-4 font-mono text-[#8750f7] hover:text-white">Html</p>
             </div>
             <div class="flex flex-col justify-center text-center">
                 <div
-                    class="group cursor-pointer bg-[#1e1f22] hover:grayscale-0 hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] p-4 md:p-12  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
+                    class="flex justify-center group cursor-pointer bg-[#1e1f22] hover:grayscale-0 hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] p-4 md:p-12  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
                     <img class="grayscale-[90%] group-hover:grayscale-0 " src="./../../../assets/css.svg" />
                 </div>
                 <p class="text-xl md:text-2xl mt-4 font-mono text-[#8750f7] hover:text-white">CSS</p>
             </div>
             <div class="flex flex-col justify-center text-center">
                 <div
-                    class="group cursor-pointer bg-[#1e1f22] hover:grayscale-0 hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] p-4 md:p-12  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
+                    class="flex justify-center group cursor-pointer bg-[#1e1f22] hover:grayscale-0 hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] p-4 md:p-12  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
                     <img class="grayscale-[90%] group-hover:grayscale-0 " src="./../../../assets/tailwind.svg" />
                 </div>
                 <p class="text-xl md:text-2xl mt-4 font-mono text-[#8750f7] hover:text-white">Tailwind Css</p>
             </div>
             <div class="flex flex-col justify-center text-center">
                 <div
-                    class="group cursor-pointer bg-[#1e1f22] hover:grayscale-0 hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] p-4 md:p-12  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
+                    class="flex justify-center group cursor-pointer bg-[#1e1f22] hover:grayscale-0 hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] p-4 md:p-12  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
                     <img class="grayscale-[90%] group-hover:grayscale-0 " src="./../../../assets/react.svg" />
                 </div>
                 <p class="text-xl md:text-2xl mt-4 font-mono text-[#8750f7] hover:text-white">Reactjs</p>
             </div>
             <div class="flex flex-col justify-center text-center">
                 <div
-                    class="group cursor-pointer bg-[#1e1f22] hover:grayscale-0 hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] p-4 md:p-12  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
+                    class="flex justify-center group cursor-pointer bg-[#1e1f22] hover:grayscale-0 hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] p-4 md:p-12  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
                     <img class="grayscale-[90%] group-hover:grayscale-0 " src="./../../../assets/angularjs.svg" />
                 </div>
                 <p class="text-xl md:text-2xl mt-4 font-mono text-[#8750f7] hover:text-white">Angular</p>
             </div>
         </div>
 
-        <div data-aos="fade-up" class="grid grid-cols-3 gap-4 md:flex justify-evenly mt-8">
+        <div data-aos="fade-up" class="grid grid-cols-2 gap-8 md:flex justify-evenly mt-8">
             <div class="flex flex-col justify-center text-center">
                 <div
-                    class="group cursor-pointer bg-[#1e1f22] hover:grayscale-0 hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] p-4 md:p-12  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
+                    class="flex justify-center group cursor-pointer bg-[#1e1f22] hover:grayscale-0 hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] p-4 md:p-12  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
                     <img class="grayscale-[90%] group-hover:grayscale-0 " src="./../../../assets/nextjs.svg" />
                 </div>
                 <p class="text-xl md:text-2xl mt-4 font-mono text-[#8750f7] hover:text-white">Nextjs</p>
@@ -298,7 +317,7 @@
         
             <div class="flex flex-col justify-center text-center">
                 <div
-                    class="group cursor-pointer bg-[#1e1f22] hover:grayscale-0 hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] p-4 md:p-12  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
+                    class="flex justify-center group cursor-pointer bg-[#1e1f22] hover:grayscale-0 hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] p-4 md:p-12  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
                     <img class="grayscale-[90%] group-hover:grayscale-0 " src="./../../../assets/javascript.svg" />
                 </div>
                 <p class="text-xl md:text-2xl mt-4 font-mono text-[#8750f7] hover:text-white">Javascript</p>
@@ -306,14 +325,14 @@
             
             <div class="flex flex-col justify-center text-center">
                 <div
-                    class="group cursor-pointer bg-[#1e1f22] hover:grayscale-0 hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] p-4 md:p-12  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
+                    class="flex justify-center group cursor-pointer bg-[#1e1f22] hover:grayscale-0 hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] p-4 md:p-12  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
                     <img class="grayscale-[90%] group-hover:grayscale-0 " src="./../../../assets/cpp.svg" />
                 </div>
                 <p class="text-xl md:text-2xl mt-4 font-mono text-[#8750f7] hover:text-white">CPP</p>
             </div>
             <div class="flex flex-col justify-center text-center">
                 <div
-                    class="group cursor-pointer bg-[#1e1f22] hover:grayscale-0 hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] p-4 md:p-12  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
+                    class="flex justify-center group cursor-pointer bg-[#1e1f22] hover:grayscale-0 hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] p-4 md:p-12  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
                     <img class="grayscale-[90%] group-hover:grayscale-0 " src="./../../../assets/TypeScript.svg" />
                 </div>
                 <p class="text-xl md:text-2xl mt-4 font-mono text-[#8750f7] hover:text-white">Typescript</p>
