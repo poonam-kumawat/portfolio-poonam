@@ -26,6 +26,7 @@
     "express": "^4.18.2",
     "jquery": "^3.7.1",
     "ng2-pdf-viewer": "^10.0.0",
+    "ngx-extended-pdf-viewer": "^20.0.1",
     "pdfjs-dist": "^4.1.392",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

@@ -11,17 +11,29 @@ import 'aos/dist/aos.css';
 })
 export class HomePageComponent implements OnInit {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+ 
+ cssLoader=true;
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
       AOS.init();
     }
     AOS.refresh();
+
+      setTimeout(() => {
+      this.cssLoader = false;
+    }, 2000);
   }
 
+ismobilenav=false;
   scrollToSection(sectionId: string) {
+    
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+   
+  }
+  onMobilenav(){
+    this.ismobilenav=!this.ismobilenav;
   }
 }
