@@ -1,0 +1,452 @@
+<app-css-loader [hidden]="!cssLoader"></app-css-loader>
+
+
+<div [hidden]="cssLoader">
+    <div class="bg-[#1A191D]">
+        <div class="flex justify-between items-center px-8 pb-4 pt-6 relative">
+            <div>
+                <p class="text-white text-3xl font-bold font-mono">Poonam Kumawat</p>
+            </div>
+            <div class="hidden md:flex justify-center gap-8 items-center">
+                <p class="text-2xl text-white cursor-pointer font-mono" (click)="scrollToSection('about')">About<span
+                        class="text-[#7544D7]">/></span></p>
+                <p class="text-2xl text-white cursor-pointer font-mono" (click)="scrollToSection('Projects')">Projects<span
+                        class="text-[#7544D7]">/></span></p>
+                <p class="text-2xl text-white cursor-pointer font-mono" (click)="scrollToSection('skills')">Skills<span
+                        class="text-[#7544D7]">/></span></p>
+                <p class="text-2xl text-white cursor-pointer font-mono" (click)="scrollToSection('blogs')">Blogs<span
+                        class="text-[#7544D7]">/></span></p>
+                <button
+                    class="font-mono px-6 py-2 border text-white text-xl rounded-[50px] border-[#7544D7] bg-[#7544D7] cursor-pointer font-bold"
+                    [routerLink]="['/resume']">Resume</button>
+            </div>
+            <img (click)="onMobilenav()" class="md:hidden w-[30px] cursor-pointer bg-[#1A191D]"
+                src="./../../../assets/menu.svg" />
+    
+        </div>
+        <div *ngIf="ismobilenav" class="bg-[#1A191D] h-[100vh] w-full z-10  absolute md:hidden">
+            <!-- <img class="w-[40px] cursor-pointer bg-[#1A191D] p-2 -ml-4" src="./../../../assets/close.svg" /> -->
+            <div class="grid  gap-8 mt-6 p-6">
+                <!-- <p class="text-2xl text-white cursor-pointer font-mono">Home<span class="text-[#7544D7]">/></span></p> -->
+                <p class="text-2xl text-white cursor-pointer font-mono" (touchend)="scrollToSection('about');onMobilenav()">
+                    About<span class="text-[#7544D7]">/></span></p>
+                <p class="text-2xl text-white cursor-pointer font-mono" (click)="scrollToSection('Projects');onMobilenav()">
+                    Projects<span class="text-[#7544D7]">/></span></p>
+                <p class="text-2xl text-white cursor-pointer font-mono" (click)="scrollToSection('skills')">Skills<span
+                        class="text-[#7544D7]">/></span></p>
+                <p class="text-2xl text-white cursor-pointer font-mono" (click)="scrollToSection('blogs')">Blogs<span
+                        class="text-[#7544D7]">/></span></p>
+                <button
+                    class="font-mono px-6 py-2 border text-white text-xl rounded-[50px] border-[#7544D7] bg-[#7544D7] cursor-pointer font-bold"
+                    [routerLink]="['/resume']">Resume</button>
+            </div>
+        </div>
+    </div>
+   
+<div class="md:px-10 bg-[#1A191D]">
+ 
+<section class="md:h-screen bg-[#1A191D] ">
+   
+    <!-- Section1 -->
+    <div class="grid md:grid-cols-2 px-5 md:px-24 justify-center items-center">
+        <div class="pt-28 md:pt-0">
+            <p class="text-white text-5xl mb-10 font-mono" ><span class="text-[#7544D7]">Hey</span>, I'm Poonam Kumawat</p>
+            <!-- <p class="text-white text-xl font-mono">A Result-Oriented Web Developer building and managing Websites and Web Applications that leads to the success of the
+            overall product</p> -->
+            <p class="text-white text-xl font-mono" >Crafting innovative solutions through code to shape the digital landscape as a software developer.</p>
+            <div class="flex gap-8 mt-10">
+            <a href="https://github.com/poonam-kumawat" target="_blank"><img class="w-[30px] h-[30px] cursor-pointer grayscale-[50%] hover:grayscale-0 hover:scale-125" src="./../../../assets/github.svg" /></a>
+            <a href="https://www.linkedin.com/in/poonam-kumawat-473385194/" target="_blank"><img class="w-[30px] h-[30px] cursor-pointer grayscale-[50%] hover:grayscale-0 hover:scale-125" src="./../../../assets/linkedin.svg" /></a>
+            <a href="https://poonamkumawat.medium.com/" target="_blank"><img class="w-[30px] h-[30px] cursor-pointer grayscale-[50%] hover:grayscale-0 hover:scale-125" src="./../../../assets/medium.svg" /></a>
+            <a href="https://twitter.com/poonam__kumawat" target="_blank"href="https://twitter.com/poonam__kumawat" target="_blank"><img class="w-[30px] h-[30px] cursor-pointer grayscale-[50%] hover:grayscale-0 hover:scale-125" src="./../../../assets/x.svg" /></a>
+            </div>
+            
+
+        </div>
+        <div>
+            <img class="" src="./../../../assets/coding-animate.svg" />
+                <!-- <img class="" src="./../../../assets/hand-coding-animate.svg" /> -->
+                <!-- <div class="h-[300px] bg-[#000] rounded-[20px] border-white border z-10">
+                </div> -->
+
+        </div>
+        
+    </div>
+
+
+    
+</section>
+
+<section class="md:h-screen bg-[#1A191D] pt-10 px-10  relative" id="about">
+
+
+    <div class="flex justify-center items-center" >
+    <p class="text-5xl text-white cursor-pointer font-mono" data-aos="fade-up">About Me<span class="text-[#7544D7]">/></span></p>
+    </div>
+    <div class="md:flex justify-between items-center gap-20 py-8 md:p-10">
+    <div class="text-white mb-10 md:mb-0">
+        <p class="font-mono text-3xl mb-5" data-aos="fade-right">Get to <span class="text-[#7544D7]">Know me</span> !</p>
+        <p class="font-mono text-xl" data-aos="fade-right">I am a skilled Software Engineer, adept in technologies like Angular 8+ and React.js, with a strong track record in
+        designing and optimizing web applications<br><br>
+        Since 2022, I
+        have been a <span class="text-[#7544D7]">Gold Google Product Expert for YouTube</span>, a role that underscores my ability to enhance user interactions on
+        one of the largest platforms through innovative solutions. Browse my projects and achievements to see how I merge
+        expertise with real-world impact. Let’s connect and explore how we can work together to create something exceptional.</p>
+
+        
+    </div>
+    <div  data-aos="zoom-in" class=" w-[300px] md:w-[400px] h-[500px] bg-[#1A191D] p-4 border-[#ddd] border-[1px] rounded-xl -scale-x-100 vert-move" >
+<div  data-aos="zoom-in" class="w-[300px] md:w-[400px] h-[500px] bg-[#1A191D]   border-[#ddd] border-[1px] rounded-xl scale-x-100" >    
+    <div class="border-b-2 py-2 border-white">
+        <div class="flex items-center gap-2 justify-end px-2">
+            <p class="p-2 rounded-[50px] bg-[#fd5e59]"></p>
+            <p class="p-2 rounded-[50px] bg-[#ffbb3b]"></p>
+            <p class="p-2 rounded-[50px] bg-[#34c748]"></p>
+        </div>
+    </div>
+    <div class="p-4 text-xs">        
+        <ngx-typed-js *ngIf="isBrowser" [strings]="typedStrings" [showCursor]="false" [startDelay]="3000" [typeSpeed]="20">
+            <h1 class="typing"></h1>
+        </ngx-typed-js>
+    </div>
+</div>
+    </div>
+    </div>
+
+</section>
+
+<section class="md:h-screen bg-[#1A191D] px-10 pt-10" id="Projects">
+    <div class="flex justify-center items-center">
+        <p class="text-5xl text-white cursor-pointer font-mono" data-aos="fade-up">Projects<span class="text-[#7544D7]">/></span></p>
+    </div>
+       
+    <div class="py-8 md:p-10 md:flex justify-between">
+        <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true" style="--swiper-pagination-color: #fff"
+            slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="50" pagination-clickable="true"
+            coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true" class="w-[auto]  md:w-[100%]">
+<!-- 
+            <swiper-container class="mySwiper" pagination="true" effect="cube" grab-cursor="true" cube-effect-shadow="true"
+                cube-effect-slide-shadows="true" cube-effect-shadow-offset="20" cube-effect-shadow-scale="0.94" class="w-[auto]  md:w-[100%]"> -->
+            
+            <!-- <swiper-container effect="cards" grab-cursor="true" class="w-[auto]  md:w-[500px]"> -->
+            <!-- <swiper-container navigation="true" space-between="20" class="w-[auto]  md:w-[100%]"> -->
+<swiper-slide class="flex justify-center">
+        <div data-aos="zoom-in" class="md:w-[500px] mb-10 md:mb-0 bg-[#1A191D] hover:shadow-2xl hover:shadow-[#7544D7] p-6 border-[#ddd] border-[1px] rounded-2xl duration-200 ease-in-out hover:-translate-y-1">
+         <div class="flex justify-between items-baseline">
+            <p class="text-white text-3xl font-mono mb-6">Scape</p>
+                        <a href="https://github.com/poonam-kumawat/scape-frontend" target="_blank">
+            <img class="w-[30px] h-[30px] cursor-pointer grayscale-[50%] hover:grayscale-0 hover:scale-150 hover:bg-[#ebebeb] hover:rounded-[50px]"
+                                src="./../../../assets/github.svg" />
+            <!-- <button class="font-mono px-6 py-2 border text-white text-xl rounded-[50px] border-[#7544D7] bg-[#7544D7] cursor-pointer font-bold">Github</button> -->
+            </a>
+
+         </div>
+            
+         <div class="flex gap-4 flex-wrap">
+         <p class="bg-[#1A191D] border-[#ddd] py-2 px-4 border-[1px] rounded-[50px]  text-xs text-white font-mono">Nextjs</p>
+         <p class="bg-[#1A191D] border-[#ddd] py-2 px-4 border-[1px] rounded-[50px]  text-xs text-white font-mono">Nestjs</p>
+         <p class="bg-[#1A191D] border-[#ddd] py-2 px-4 border-[1px] rounded-[50px]  text-xs text-white font-mono">Socket.io</p>
+        <p class="bg-[#1A191D] border-[#ddd] py-2 px-4 border-[1px] rounded-[50px]  text-xs text-white font-mono">MongoDB</p>
+    <p class="bg-[#1A191D] border-[#ddd] py-2 px-4 border-[1px] rounded-[50px]  text-xs text-white font-mono">Tailwind CSS
+    </p>
+    </div>
+        <p class="text-white font-mono text-[14px] mt-6">Scape is a cutting-edge chat application that brings people together through intuitive and dynamic communication
+        features.</p>
+        <div class="mt-6 cursor-pointer border-[#ddd] border-[1px] rounded-xl hover:border-0  ">
+            <a href="https://scape-chat.vercel.app/"><img class="rounded-xl  hover:scale-150 hover:-translate-y-32 transition ease-in-out delay-150" src="./../../../assets/scape.svg" /></a>
+        </div>
+    </div>
+    </swiper-slide>
+    <swiper-slide  class="flex justify-center">
+    <div data-aos="zoom-in" class="md:w-[500px] mb-10 md:mb-0 bg-[#1A191D] hover:shadow-2xl hover:shadow-[#7544D7] p-6 border-[#ddd] border-[1px] rounded-2xl duration-200 ease-in-out hover:-translate-y-1">
+       
+       <div class="flex justify-between items-baseline">
+        <p class="text-white text-3xl font-mono mb-6">Zest</p>
+        <a href="https://github.com/poonam-kumawat/zest-frontend" target="_blank">
+            <img class="w-[30px] h-[30px] cursor-pointer grayscale-[50%] hover:grayscale-0 hover:scale-150 hover:bg-[#ebebeb] hover:rounded-[50px]"
+                src="./../../../assets/github.svg" />
+            <!-- <button class="font-mono px-6 py-2 border text-white text-xl rounded-[50px] border-[#7544D7] bg-[#7544D7] cursor-pointer font-bold">Github</button> -->
+        </a>
+       </div>
+        
+        <div class="flex gap-4 flex-wrap">
+            <p class="bg-[#1A191D] border-[#ddd] py-2 px-4 border-[1px] rounded-[50px]  text-xs text-white font-mono">Reactjs
+            </p>
+            <p class="bg-[#1A191D] border-[#ddd] py-2 px-4 border-[1px] rounded-[50px]  text-xs text-white font-mono">Expressjs
+            </p>
+            <p class="bg-[#1A191D] border-[#ddd] py-2 px-4 border-[1px] rounded-[50px]  text-xs text-white font-mono">RazorPay
+            </p>
+            <p class="bg-[#1A191D] border-[#ddd] py-2 px-4 border-[1px] rounded-[50px]  text-xs text-white font-mono">MongoDB
+            </p>
+            <p class="bg-[#1A191D] border-[#ddd] py-2 px-4 border-[1px] rounded-[50px]  text-xs text-white font-mono">Tailwind CSS
+            </p>
+        </div>
+        <p class="text-white font-mono text-[14px] mt-6">Zest is a feature-rich ecommerce grocery website developed to provide users with a seamless shopping experience for
+        their daily essentials.</p>
+        <div class="mt-6 cursor-pointer border-[#ddd] border-[1px] rounded-xl ">
+            <a href="https://zest-organic.vercel.app/" target="_blank"><img class="rounded-xl hover:scale-150 hover:-translate-y-32 transition ease-in-out delay-150" src="./../../../assets/zest.svg" /></a>
+        </div>
+    </div>
+    </swiper-slide>
+    <swiper-slide  class="flex justify-center">
+    <div data-aos="zoom-in" class="md:w-[500px] mb-10 md:mb-0 bg-[#1A191D] hover:shadow-2xl hover:shadow-[#7544D7] p-6 border-[#ddd] border-[1px] rounded-2xl    duration-200 ease-in-out hover:-translate-y-1">
+        <div class="flex justify-between items-baseline">
+         <p class="text-white text-3xl font-mono mb-6">YoutubeSave</p>
+        <a href="https://github.com/poonam-kumawat/Youtube_Video_Downloader" target="_blank">
+            <img class="w-[30px] h-[30px] cursor-pointer grayscale-[50%] hover:grayscale-0 hover:scale-150 hover:bg-[#ebebeb] hover:rounded-[50px]"
+                src="./../../../assets/github.svg" />
+            <!-- <button class="font-mono px-6 py-2 border text-white text-xl rounded-[50px] border-[#7544D7] bg-[#7544D7] cursor-pointer font-bold">Github</button> -->
+        </a>
+        </div>
+        
+        <div class="flex gap-4 flex-wrap">
+            <p class="bg-[#1A191D] border-[#ddd] py-2 px-4 border-[1px] rounded-[50px]  text-xs text-white font-mono">Reactjs
+            </p>
+            <p class="bg-[#1A191D] border-[#ddd] py-2 px-4 border-[1px] rounded-[50px]  text-xs text-white font-mono">Express js
+            </p>
+            <p class="bg-[#1A191D] border-[#ddd] py-2 px-4 border-[1px] rounded-[50px]  text-xs text-white font-mono">Tailwind CSS
+            </p>
+            <p class="bg-[#1A191D] border-[#ddd] py-2 px-4 border-[1px] rounded-[50px]  text-xs text-white font-mono">HTML
+            </p>
+            
+        </div>
+        <p class="text-white font-mono text-[14px] mt-6">YouTubeSave is a free online tool that enables you to download YouTube videos in various formats and resolutions
+            features.</p>
+        <div class="mt-6 cursor-pointer border-[#ddd] border-[1px] rounded-xl ">
+            <a href="https://youtubesave-downloader.vercel.app/" target="_blank">
+            <img class="rounded-xl hover:scale-150 hover:-translate-y-32 transition ease-in-out delay-150" src="./../../../assets/youtubesave.svg" />
+            </a>
+        </div>
+    </div>
+    </swiper-slide>
+    <swiper-slide class="flex justify-center">
+        <div data-aos="zoom-in"
+            class="md:w-[500px] mb-10 md:mb-0 bg-[#1A191D] hover:shadow-2xl hover:shadow-[#7544D7] p-6 border-[#ddd] border-[1px] rounded-2xl    duration-200 ease-in-out hover:-translate-y-1">
+            <div class="flex justify-between items-baseline">
+            <p class="text-white text-3xl font-mono mb-6">Sparky</p>
+            <a href="https://github.com/poonam-kumawat/sparky" target="_blank">
+                <img class="w-[30px] h-[30px] cursor-pointer grayscale-[50%] hover:grayscale-0 hover:scale-150 hover:bg-[#ebebeb] hover:rounded-[50px]"
+                    src="./../../../assets/github.svg" />
+                <!-- <button class="font-mono px-6 py-2 border text-white text-xl rounded-[50px] border-[#7544D7] bg-[#7544D7] cursor-pointer font-bold">Github</button> -->
+            </a>
+            </div>
+            <div class="flex gap-4 flex-wrap">
+                <p class="bg-[#1A191D] border-[#ddd] py-2 px-4 border-[1px] rounded-[50px]  text-xs text-white font-mono">
+                    Reactjs
+                </p>
+                <p class="bg-[#1A191D] border-[#ddd] py-2 px-4 border-[1px] rounded-[50px]  text-xs text-white font-mono">
+                    Express js
+                </p>
+                <p class="bg-[#1A191D] border-[#ddd] py-2 px-4 border-[1px] rounded-[50px]  text-xs text-white font-mono">
+                    Tailwind CSS
+                </p>
+                <p class="bg-[#1A191D] border-[#ddd] py-2 px-4 border-[1px] rounded-[50px]  text-xs text-white font-mono">
+                    HTML
+                </p>
+    
+            </div>
+            <p class="text-white font-mono text-[14px] mt-6">Sparky – React.js Gaming Info Website Template  is an all-encompassing gaming platform designed to deliver a
+            dynamic and engaging user experience, perfectly tailored for gamers and enthusiasts alike.
+                features.</p>
+            <div class="mt-6 cursor-pointer border-[#ddd] border-[1px] rounded-xl ">
+                <a href="https://sparky-9f2fa.web.app/" target="_blank"><img class="rounded-xl hover:scale-150 hover:-translate-y-32 transition ease-in-out delay-150" src="./../../../assets/sparky.png" /></a>
+            </div>
+        </div>
+    </swiper-slide>
+        </swiper-container>
+
+        
+
+    </div>
+</section>
+
+<section class="md:h-screen bg-[#1A191D] px-10 pt-10" id="skills">
+<div class="flex justify-center items-center">
+    <p class="text-5xl text-white cursor-pointer font-mono" data-aos="fade-up">Skills<span class="text-[#7544D7]">/></span></p>
+</div>
+    <div class="py-10 md:p-10">
+        <div data-aos="fade-up" class=" grid grid-cols-2 gap-8 md:flex justify-evenly">
+            <div class="flex flex-col justify-center text-center">
+                <div
+                    class="flex justify-center group cursor-pointer bg-[#1e1f22] hover:grayscale-0 hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7]  p-4 md:p-12  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
+                    <img class="grayscale-[90%] group-hover:grayscale-0 " src="./../../../assets/Figma-logo.svg" />
+                </div>
+                <p class="text-xl md:text-2xl mt-4 font-mono text-[#8750f7] hover:text-white">Figma</p>
+            </div>
+
+            <div class="flex flex-col justify-center text-center">
+                <div
+                    class="flex justify-center group cursor-pointer bg-[#1e1f22] hover:grayscale-0 hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] p-4 md:p-12  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
+                    <img class="grayscale-[90%] group-hover:grayscale-0 " src="./../../../assets/html-5.svg" />
+                </div>
+                <p class="text-xl md:text-2xl mt-4 font-mono text-[#8750f7] hover:text-white">Html</p>
+            </div>
+            <div class="flex flex-col justify-center text-center">
+                <div
+                    class="flex justify-center group cursor-pointer bg-[#1e1f22] hover:grayscale-0 hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] p-4 md:p-12  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
+                    <img class="grayscale-[90%] group-hover:grayscale-0 " src="./../../../assets/css.svg" />
+                </div>
+                <p class="text-xl md:text-2xl mt-4 font-mono text-[#8750f7] hover:text-white">CSS</p>
+            </div>
+            <div class="flex flex-col justify-center text-center">
+                <div
+                    class="flex justify-center group cursor-pointer bg-[#1e1f22] hover:grayscale-0 hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] p-4 md:p-12  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
+                    <img class="grayscale-[90%] group-hover:grayscale-0 " src="./../../../assets/tailwind.svg" />
+                </div>
+                <p class="text-xl md:text-2xl mt-4 font-mono text-[#8750f7] hover:text-white">Tailwind Css</p>
+            </div>
+            <div class="flex flex-col justify-center text-center">
+                <div
+                    class="flex justify-center group cursor-pointer bg-[#1e1f22] hover:grayscale-0 hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] p-4 md:p-12  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
+                    <img class="grayscale-[90%] group-hover:grayscale-0 " src="./../../../assets/react.svg" />
+                </div>
+                <p class="text-xl md:text-2xl mt-4 font-mono text-[#8750f7] hover:text-white">Reactjs</p>
+            </div>
+            <div class="flex flex-col justify-center text-center">
+                <div
+                    class="flex justify-center group cursor-pointer bg-[#1e1f22] hover:grayscale-0 hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] p-4 md:p-12  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
+                    <img class="grayscale-[90%] group-hover:grayscale-0 " src="./../../../assets/angularjs.svg" />
+                </div>
+                <p class="text-xl md:text-2xl mt-4 font-mono text-[#8750f7] hover:text-white">Angular</p>
+            </div>
+        </div>
+
+        <div data-aos="fade-up" class="grid grid-cols-2 gap-8 md:flex justify-evenly mt-8">
+            <div class="flex flex-col justify-center text-center">
+                <div
+                    class="flex justify-center group cursor-pointer bg-[#1e1f22] hover:grayscale-0 hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] p-4 md:p-12  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
+                    <img class="grayscale-[90%] group-hover:grayscale-0 " src="./../../../assets/nextjs.svg" />
+                </div>
+                <p class="text-xl md:text-2xl mt-4 font-mono text-[#8750f7] hover:text-white">Nextjs</p>
+            </div>
+        
+            <div class="flex flex-col justify-center text-center">
+                <div
+                    class="flex justify-center group cursor-pointer bg-[#1e1f22] hover:grayscale-0 hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] p-4 md:p-12  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
+                    <img class="grayscale-[90%] group-hover:grayscale-0 " src="./../../../assets/javascript.svg" />
+                </div>
+                <p class="text-xl md:text-2xl mt-4 font-mono text-[#8750f7] hover:text-white">Javascript</p>
+            </div>
+            
+            <div class="flex flex-col justify-center text-center">
+                <div
+                    class="flex justify-center group cursor-pointer bg-[#1e1f22] hover:grayscale-0 hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] p-4 md:p-12  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
+                    <img class="grayscale-[90%] group-hover:grayscale-0 " src="./../../../assets/cpp.svg" />
+                </div>
+                <p class="text-xl md:text-2xl mt-4 font-mono text-[#8750f7] hover:text-white">CPP</p>
+            </div>
+            <div class="flex flex-col justify-center text-center">
+                <div
+                    class="flex justify-center group cursor-pointer bg-[#1e1f22] hover:grayscale-0 hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] p-4 md:p-12  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
+                    <img class="grayscale-[90%] group-hover:grayscale-0 " src="./../../../assets/TypeScript.svg" />
+                </div>
+                <p class="text-xl md:text-2xl mt-4 font-mono text-[#8750f7] hover:text-white">Typescript</p>
+            </div>
+            
+        </div>
+        
+    </div>
+</section>
+
+<section class="md:h-screen bg-[#1A191D] px-10 pt-10" id="blogs">
+    <div class="flex justify-center items-center">
+        <p class="text-5xl text-white cursor-pointer font-mono" data-aos="fade-up">Blogs<span class="text-[#7544D7]">/></span></p>
+    </div>
+    <div class="py-10 md:p-10">
+        <div class="md:flex justify-between gap-10">
+            <div  data-aos="fade-right" class="flex flex-col justify-center">
+                <div class="mb-10 md:mb-0 group relative cursor-pointer bg-[#1e1f22] hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] p-2 md:p-6  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
+                   <span class="p-8 bg-[#7544D7]  absolute left-0 bottom-0 rounded-tr-[25px]"></span>
+                   <span class="p-8 bg-[#7544D7] hidden md:block absolute right-0 top-0 rounded-bl-[25px]"></span>
+                    <div class="flex md:px-4">
+                    <img class="text-left w-[80px]" src="./../../../assets/Puppeteer.svg" />
+                
+                    <p class="text-xs md:text-2xl text-white font-mono mt-2">Web Scraping with Puppeteer creating Json file</p>
+                    </div>
+                <a href="https://poonamkumawat.medium.com/web-scraping-with-puppeteer-creating-json-file-fe4dc58628a4" target="_blank"><button class="float-end cursor-pointer rounded-[10px] font-mono px-10 py-2 mt-10 text-white text-xl bg-[#7544D7]">Read</button>
+            </a>
+                </div>
+                
+                
+            </div> 
+            <a href="https://poonamkumawat.medium.com/git-made-simple-an-introduction-to-basic-git-commands-e95b7d27855a" target="_blank">  
+            <div data-aos="fade-right" class="flex flex-col justify-center">
+                <div
+                    class="group relative cursor-pointer bg-[#1e1f22] hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7]  p-2 md:p-6  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
+                    <span class="p-8 bg-[#7544D7] absolute left-0 bottom-0 rounded-tr-[25px]"></span>
+                    <div class="flex ">
+                        <img class="text-left w-[80px]" src="./../../../assets/Github-logo.svg" />
+            
+                        <p class="text-xs md:text-2xl text-white font-mono mt-2">Git Made Simple: An Introduction to Basic Git Commands</p>
+                    </div>
+                    <button
+                        class="float-end cursor-pointer rounded-[10px] font-mono px-10 py-2 mt-10 text-white text-xl bg-[#7544D7]">Read</button>
+                </div>
+            
+            
+            </div>
+            </a>
+           
+        </div>
+
+        <div class="md:flex justify-between gap-10 mt-10">
+            <a href="https://poonamkumawat.medium.com/a-new-era-of-ai-introducing-the-next-generation-of-artificial-intelligence-tools-edbddd92eb1b" target="_blank">
+            <div data-aos="fade-right" class="flex flex-col justify-center">
+                <div
+                    class="group mb-10 md:mb-0 relative cursor-pointer bg-[#1e1f22] hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] p-2 md:p-6  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
+                    <span class="p-8 bg-[#7544D7] absolute left-0 bottom-0 rounded-tr-[25px]"></span>
+                    <div class="flex px-2 md:px-4 gap-4">
+                        <img class="text-left w-[80px]" src="./../../../assets/medium.svg" />
+        
+                        <p class="text-xs md:text-2xl text-white font-mono mt-2">A New Era of AI: Introducing the Next Generation of Artificial Intelligence Tools</p>
+                    </div>
+                    <button
+                        class="float-end cursor-pointer rounded-[10px] font-mono px-10 py-2 mt-10 text-white text-xl bg-[#7544D7]">Read</button>
+                </div>
+        
+        
+            </div>
+            </a>
+            <a href="https://poonamkumawat.medium.com/maximizing-jenkins-efficiency-a-step-by-step-guide-to-setting-up-master-slave-configuration-bdc62e357543" target="_blank">
+            <div data-aos="fade-right" class="flex flex-col justify-center">
+                <div
+                    class="group relative cursor-pointer bg-[#1e1f22] hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] p-2 md:p-6  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
+                    <span class="p-8 bg-[#7544D7] absolute left-0 bottom-0 rounded-tr-[25px]"></span>
+                    <span class="p-8 bg-[#7544D7] hidden md:block absolute right-0 top-0 rounded-bl-[25px]"></span>
+                    <div class="flex gap-4 md:px-4 ">
+                        <img class="text-left w-[80px]" src="./../../../assets/Jenkins_logo.svg" />
+        
+                        <p class="text-xs md:text-2xl text-white font-mono mt-2">Maximizing Jenkins Efficiency: A Step-by-Step Guide to Setting up Master-Slave Configuration</p>
+                    </div>
+                    <button
+                        class="float-end cursor-pointer rounded-[10px] font-mono px-10 py-2 mt-10 text-white text-xl bg-[#7544D7]">Read</button>
+                </div>
+        
+        
+            </div>
+            </a>
+        
+        </div>
+
+
+    </div>
+</section>
+</div>
+
+<section class="bg-[#1A191D]">
+    <div class=" grid text-center md:flex justify-between items-center border-t-2 border-white p-8">
+    <div class="">
+        <p class="text-white text-xl font-mono">Poonam kumawat</p>
+        <p class="text-white text-xl font-mono">mailpoonam2002&#64;gmail.com</p>
+    </div>
+    <p class="text-white text-xl font-mono">Copyright © by poonam kumawat</p>
+    <div class="flex gap-8 mt-10 justify-center">
+            <a href="https://github.com/poonam-kumawat" target="_blank"><img class="w-[30px] h-[30px] cursor-pointer grayscale-[50%] hover:grayscale-0 hover:scale-125" src="./../../../assets/github.svg" /></a>
+            <a href="https://www.linkedin.com/in/poonam-kumawat-473385194/" target="_blank"><img class="w-[30px] h-[30px] cursor-pointer grayscale-[50%] hover:grayscale-0 hover:scale-125" src="./../../../assets/linkedin.svg" /></a>
+            <a href="https://poonamkumawat.medium.com/" target="_blank"><img class="w-[30px] h-[30px] cursor-pointer grayscale-[50%] hover:grayscale-0 hover:scale-125" src="./../../../assets/medium.svg" /></a>
+            <a href="https://twitter.com/poonam__kumawat" target="_blank"href="https://twitter.com/poonam__kumawat" target="_blank"><img class="w-[30px] h-[30px] cursor-pointer grayscale-[50%] hover:grayscale-0 hover:scale-125" src="./../../../assets/x.svg" /></a>
+     </div>
+    </div>
+
+</section>
+</div>

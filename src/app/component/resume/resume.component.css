@@ -1,0 +1,7 @@
+.ngx-extended-pdf-viewer #viewerContainer {
+    overflow: unset !important;
+}
+
+::ng-deep .hiddenCanvasElement{
+    display: none;
+}
