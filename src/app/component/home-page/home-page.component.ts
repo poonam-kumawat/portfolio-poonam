@@ -1,7 +1,11 @@
 import { isPlatformBrowser } from '@angular/common';
-import { AfterViewInit, Component, Inject, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core';
+import { AfterContentChecked, AfterViewInit, Component, HostListener, Inject, OnDestroy, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
 import AOS from 'aos';
+// import * as AOS from 'aos';
 import 'aos/dist/aos.css';
+import { NgxTypedJsComponent } from 'ngx-typed-js';
+import { Subject, debounceTime } from 'rxjs';
+// import { Typewriter } from 'typewriter-effect';
 
 
 @Component({
@@ -10,30 +14,77 @@ import 'aos/dist/aos.css';
   styleUrl: './home-page.component.css',
 })
 export class HomePageComponent implements OnInit {
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
- 
- cssLoader=true;
+  typedStrings: string[] = [
+    `       <p style="color:#EEFF31"><span style="color:#5918DF">class </span> PoonamKumawat<span
+                style="color:#ffffff"> &#123;</span></p>
+        <p style="color:#ffffff"><span style="color:#5918DF">constructor </span>&#40;&#41;<span
+                style="color:#ffffff"> &#123;</span></p>
+        <p style="color:#E3244C">this<span style="color:#24E394">.name</span><span
+                style="color:#E3244C">&#61;</span><span style="color:#24E394">"Poonam Kumawat"</span><span
+                style="color:#ffffff">&#59;</span></p>
+        <p style="color:#E3244C">this<span style="color:#24E394">.dateOfBirth</span><span
+                style="color:#E3244C">&#61;</span><span style="color:#24E394">"05012002"</span><span
+                style="color:#ffffff">&#59;</span></p>
+        <p style="color:#E3244C">this<span style="color:#24E394">.email</span><span
+                style="color:#E3244C">&#61;</span><span
+                style="color:#24E394">"mailpoonam2002&#64;gmail.com"</span><span style="color:#ffffff">&#59;</span>
+        </p>
+        <p style="color:#ffffff">&#125;</p>
+        <p style="color:#EEFF31">workExperince<span style="color:#ffffff"> &#123;</span></p>
+        <p style="color:#ffffff"><span style="color:#5918DF">return </span>&#91;</p>
+        <p style="color:#ffffff">&#123;<span style="color:#24E394">'2023 : Present'</span> : <span
+                style="color:#24E394">'Junior Software Engineer'</span>&#125;&#59;</p>
+        <p style="color:#ffffff">&#93;</p>
+        <p style="color:#ffffff">&#125;</p>   
+        <p style="color:#EEFF31">education<span style="color:#ffffff"> &#123;</span></p>
+        <p style="color:#ffffff"><span style="color:#5918DF">return </span>&#91;</p>
+        <p style="color:#ffffff">&#123;<span style="color:#24E394">'2021 : 2023'</span> : <span
+                style="color:#24E394">'Mumbai University- Master in Computer Applications'</span>&#125;,</p>
+        <p style="color:#ffffff">&#123;<span style="color:#24E394">'2028 : 2021'</span> : <span
+                style="color:#24E394">'Mumbai University- Bachelor in Information Technology'</span>&#125;,</p>
+        <p style="color:#ffffff">&#93;</p>
+        <p style="color:#ffffff">&#125;</p>
+          <p style="color:#EEFF31">skills<span style="color:#ffffff"> &#123;</span></p>
+        <p style="color:#ffffff"><span style="color:#5918DF">return </span>&#91;</p>
+        <p style="color:#ffffff"><span
+                style="color:#24E394">'HTML/CSS/JS','Angular','React','Nextjs',<br>'Bootstrap/Tailwind CSS',
+                'Typescript', 'Git/Github'</span>
+            &#59;</p>
+        <p style="color:#ffffff">&#93;</p>
+        <p style="color:#ffffff">&#125;</p>
+        <p style="color:#ffffff">&#125;</p>`,
+  ];
+  isBrowser: boolean;
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+    this.isBrowser = isPlatformBrowser(this.platformId);
+  }
+
+  cssLoader = true;
+  private scrollEvent = new Subject<void>();
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
       AOS.init();
+      
     }
-    AOS.refresh();
 
-      setTimeout(() => {
+    setTimeout(() => {
       this.cssLoader = false;
     }, 2000);
+    // AOS.refresh();
+  }
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+      AOS.refresh();
   }
 
-ismobilenav=false;
+  ismobilenav = false;
   scrollToSection(sectionId: string) {
-    
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-   
   }
-  onMobilenav(){
-    this.ismobilenav=!this.ismobilenav;
+  onMobilenav() {
+    this.ismobilenav = !this.ismobilenav;
   }
 }

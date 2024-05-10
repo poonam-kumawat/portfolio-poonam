@@ -4,6 +4,9 @@
 @tailwind utilities;
 
 
+*{
+    font-family: monospace;
+}
 ::-webkit-scrollbar {
     width: 12px;
     
