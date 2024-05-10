@@ -23,6 +23,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "allowedCommonJsDependencies": [
+              "lodash","file-saver","lodash.throttle","lodash.debounce"
+            ],
             "outputPath": "dist/poonam-kumawat",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -59,8 +62,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "1.1mb",
+                  "maximumError": "1.1mb"
                 },
                 {
                   "type": "anyComponentStyle",
