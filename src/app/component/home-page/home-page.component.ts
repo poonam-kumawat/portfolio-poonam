@@ -1,5 +1,5 @@
 import { isPlatformBrowser } from '@angular/common';
-import { AfterContentChecked, AfterViewInit, Component, HostListener, Inject, OnDestroy, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
+import { AfterContentChecked, AfterViewInit, Component, HostBinding, HostListener, Inject, OnDestroy, OnInit, PLATFORM_ID, ViewChild, signal } from '@angular/core';
 import AOS from 'aos';
 // import * as AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -86,5 +86,9 @@ export class HomePageComponent implements OnInit {
   }
   onMobilenav() {
     this.ismobilenav = !this.ismobilenav;
+  }
+  darkMode=signal<boolean>(false);
+  @HostBinding("class.dark") get mode(){
+    return this.darkMode();
   }
 }

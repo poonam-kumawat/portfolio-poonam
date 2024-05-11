@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding, signal } from '@angular/core';
 import {
   HttpClient,
   HttpHeaders,
@@ -27,5 +27,9 @@ export class ResumeComponent {
       }
     };
     xhr.send();
+  }
+  darkMode = signal<boolean>(false);
+  @HostBinding('class.dark') get mode() {
+    return this.darkMode();
   }
 }
