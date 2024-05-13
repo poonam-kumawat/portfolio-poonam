@@ -1,10 +1,12 @@
 import { isPlatformBrowser } from '@angular/common';
 import { AfterContentChecked, AfterViewInit, Component, HostBinding, HostListener, Inject, OnDestroy, OnInit, PLATFORM_ID, ViewChild, signal } from '@angular/core';
+import { Route, Router } from '@angular/router';
 import AOS from 'aos';
 // import * as AOS from 'aos';
 import 'aos/dist/aos.css';
 import { NgxTypedJsComponent } from 'ngx-typed-js';
 import { Subject, debounceTime } from 'rxjs';
+import { SharedService } from '../../service/shared.service';
 // import { Typewriter } from 'typewriter-effect';
 
 
@@ -55,7 +57,11 @@ export class HomePageComponent implements OnInit {
         <p style="color:#ffffff">&#125;</p>`,
   ];
   isBrowser: boolean;
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private route: Router,
+    private sharedService: SharedService
+  ) {
     this.isBrowser = isPlatformBrowser(this.platformId);
   }
 
@@ -64,7 +70,6 @@ export class HomePageComponent implements OnInit {
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
       AOS.init();
-      
     }
 
     setTimeout(() => {
@@ -74,7 +79,7 @@ export class HomePageComponent implements OnInit {
   }
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
-      AOS.refresh();
+    AOS.refresh();
   }
 
   ismobilenav = false;
@@ -87,8 +92,15 @@ export class HomePageComponent implements OnInit {
   onMobilenav() {
     this.ismobilenav = !this.ismobilenav;
   }
-  darkMode=signal<boolean>(false);
-  @HostBinding("class.dark") get mode(){
+  darkMode = signal<boolean>(false);
+  @HostBinding('class.dark') get mode() {
     return this.darkMode();
+  }
+  onResume() {
+    if (this.darkMode()) {
+      this.sharedService.downloadPdf();
+    } else {
+      this.route.navigate(['/resume']);
+    }
   }
 }
