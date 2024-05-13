@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding, signal } from '@angular/core';
 import {
   HttpClient,
   HttpHeaders,
@@ -6,6 +6,7 @@ import {
 } from '@angular/common/http';
 import { saveAs } from 'file-saver';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+import { SharedService } from '../../service/shared.service';
 
 @Component({
   selector: 'app-resume',
@@ -13,19 +14,31 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
   styleUrl: './resume.component.css',
 })
 export class ResumeComponent {
-  downloadPdf(): void {
-    const pdfUrl = '/assets/resume/poonamresume.pdf'; // Replace with your PDF file path
+  constructor(private sharedService:SharedService){
+   
 
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', pdfUrl, true);
-    xhr.responseType = 'blob';
+  }
+  downloadPdf(){
+    this.sharedService.downloadPdf();
+  }
 
-    xhr.onload = () => {
-      if (xhr.status === 200) {
-        const blob = new Blob([xhr.response], { type: 'application/pdf' });
-        saveAs(blob, 'Poonam_Kumawat.pdf');
-      }
-    };
-    xhr.send();
+  // downloadPdf(): void {
+  //   const pdfUrl = '/assets/resume/poonamresume.pdf'; 
+
+  //   const xhr = new XMLHttpRequest();
+  //   xhr.open('GET', pdfUrl, true);
+  //   xhr.responseType = 'blob';
+
+  //   xhr.onload = () => {
+  //     if (xhr.status === 200) {
+  //       const blob = new Blob([xhr.response], { type: 'application/pdf' });
+  //       saveAs(blob, 'Poonam_Kumawat.pdf');
+  //     }
+  //   };
+  //   xhr.send();
+  // }
+  darkMode = signal<boolean>(false);
+  @HostBinding('class.dark') get mode() {
+    return this.darkMode();
   }
 }
