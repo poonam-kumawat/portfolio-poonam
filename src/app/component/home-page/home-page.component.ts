@@ -94,6 +94,7 @@ export class HomePageComponent implements OnInit {
   }
   darkMode = signal<boolean>(false);
   @HostBinding('class.dark') get mode() {
+    
     return this.darkMode();
   }
   onResume() {
