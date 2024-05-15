@@ -18,7 +18,7 @@
                         class="text-[#7544D7]">/></span></p>
                 <button
                     class="font-mono px-6 py-2 border  text-white text-xl rounded-[50px] border-[#7544D7] bg-[#7544D7] cursor-pointer font-bold"
-                    [routerLink]="['/resume']">Resume</button>
+                    (click)="onResume()">Resume</button>
                     <p  (click)="darkMode.set(!darkMode())">  
                         <img *ngIf="darkMode()" class="w-[30px] h-[30px] cursor-pointer" src="./../../../assets/moon.svg" />
                         <img *ngIf="!darkMode()" class="w-[30px] h-[30px] cursor-pointer"
@@ -36,7 +36,7 @@
            
     
         </div>
-        <div *ngIf="ismobilenav" class="bg-[#1A191D] dark:bg-[#F6F6F6] h-[100vh] w-full z-10  absolute md:hidden">
+        <div *ngIf="ismobilenav" (click)="onMobilenav()" class="bg-[#1A191D] dark:bg-[#F6F6F6] h-[100vh] w-full z-10  absolute md:hidden">
             <div class="grid  gap-8 mt-6 p-6">
                 <p class="text-2xl dark:text-[#333] text-white cursor-pointer font-mono" (touchend)="scrollToSection('about');onMobilenav()">
                     About<span class="text-[#7544D7]">/></span></p>
@@ -310,7 +310,7 @@
             <div class="flex flex-col justify-center text-center">
                 <div
                     class="flex justify-center group cursor-pointer bg-[#1e1f22] dark:bg-[#F6F6F6] hover:grayscale-0 hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] p-4 md:p-12  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
-                    <img class="grayscale-[90%] group-hover:grayscale-0 " src="./../../../assets/nextjs.svg" />
+                    <img class="grayscale-[90%] group-hover:grayscale-0 " src="./../../../assets/nextjss.svg" />
                 </div>
                 <p class="text-xl md:text-2xl mt-4 font-mono text-[#7544D7] hover:text-white dark:hover:text-[#333]">Nextjs</p>
             </div>
@@ -351,8 +351,6 @@
         <div class="md:flex justify-between gap-10">
             <div  data-aos="fade-right" class="flex flex-col justify-center">
                 <div class="mb-10 md:mb-0 group relative cursor-pointer bg-[#1e1f22] dark:bg-[#F6F6F6] dark:border-[#333] dark:border-[1px] hover:shadow-2xl hover:bg-[#2a1454] hover:border-[#8750f7] dark:hover:border-[#8750f7] p-2 md:p-6  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
-                   <span class="p-8 bg-[#7544D7]  absolute left-0 bottom-0 rounded-tr-[25px]"></span>
-                   <span class="p-8 bg-[#7544D7] hidden md:block absolute right-0 top-0 rounded-bl-[25px]"></span>
                     <div class="flex md:px-4">
                     <img class="text-left w-[80px]" src="./../../../assets/Puppeteer.svg" />
                 
@@ -368,7 +366,6 @@
             <div data-aos="fade-right" class="flex flex-col justify-center">
                 <div
                     class="group relative cursor-pointer bg-[#1e1f22] dark:bg-[#F6F6F6] hover:shadow-2xl dark:border-[#333] dark:border-[1px] dark:hover:border-[#8750f7] hover:bg-[#2a1454] hover:border-[#8750f7]  p-2 md:p-6  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
-                    <span class="p-8 bg-[#7544D7] absolute left-0 bottom-0 rounded-tr-[25px]"></span>
                     <div class="flex ">
                         <img class="text-left w-[80px]" src="./../../../assets/Github-logo.svg" />
             
@@ -389,7 +386,6 @@
             <div data-aos="fade-right" class="flex flex-col justify-center">
                 <div
                     class="group mb-10 md:mb-0 relative cursor-pointer bg-[#1e1f22] dark:bg-[#F6F6F6] hover:shadow-2xl dark:hover:border-[#8750f7] dark:border-[#333] dark:border-[1px] hover:bg-[#2a1454] hover:border-[#8750f7] p-2 md:p-6  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
-                    <span class="p-8 bg-[#7544D7] absolute left-0 bottom-0 rounded-tr-[25px]"></span>
                     <div class="flex px-2 md:px-4 gap-4">
                         <img class="text-left w-[80px]" src="./../../../assets/medium.svg" />
         
@@ -406,9 +402,7 @@
             <div data-aos="fade-right" class="flex flex-col justify-center">
                 <div
                     class="group relative cursor-pointer bg-[#1e1f22] dark:bg-[#F6F6F6] hover:shadow-2xl dark:hover:border-[#8750f7] dark:border-[#333] dark:border-[1px] hover:bg-[#2a1454] hover:border-[#8750f7] p-2 md:p-6  hover:border-[1px] rounded-[25px] duration-200 ease-in-out hover:-translate-y-1">
-                    <span class="p-8 bg-[#7544D7] absolute left-0 bottom-0 rounded-tr-[25px]"></span>
-                    <span class="p-8 bg-[#7544D7] hidden md:block absolute right-0 top-0 rounded-bl-[25px]"></span>
-                    <div class="flex gap-4 md:px-4 ">
+                   <div class="flex gap-4 md:px-4 ">
                         <img class="text-left w-[80px]" src="./../../../assets/Jenkins_logo.svg" />
         
                         <p class="text-xs md:text-2xl dark:text-[#333]  text-white font-mono mt-2">Maximizing Jenkins Efficiency: A Step-by-Step Guide to Setting up Master-Slave Configuration</p>
