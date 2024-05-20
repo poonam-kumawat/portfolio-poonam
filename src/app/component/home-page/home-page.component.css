@@ -32,3 +32,6 @@
         transform: translateY(-10px);
     }
 }
+:host-context(.loading) body {
+    overflow: hidden;
+}

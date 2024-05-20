@@ -1,7 +1,7 @@
-<app-css-loader [hidden]="!cssLoader"></app-css-loader>
+<app-css-loader *ngIf="cssLoader"></app-css-loader>
 
 
-<div [hidden]="cssLoader">
+<div *ngIf="!cssLoader">
     <div class="dark:bg-[#fff] bg-[#1A191D]">
         <div class="flex justify-between items-center  px-5 md:px-8 pb-4 pt-6 relative">
             <div>
