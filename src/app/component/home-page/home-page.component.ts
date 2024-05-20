@@ -70,11 +70,15 @@ export class HomePageComponent implements OnInit {
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
       AOS.init();
-    }
+      document.body.classList.add('loading');
 
-    setTimeout(() => {
-      this.cssLoader = false;
-    }, 2000);
+      setTimeout(() => {
+        this.cssLoader = false;
+        document.body.classList.remove('loading');
+      }, 2000);
+    }
+    
+    
     // AOS.refresh();
   }
   @HostListener('window:scroll', ['$event'])
