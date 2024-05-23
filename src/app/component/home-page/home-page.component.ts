@@ -1,13 +1,9 @@
 import { isPlatformBrowser } from '@angular/common';
-import { AfterContentChecked, AfterViewInit, Component, HostBinding, HostListener, Inject, OnDestroy, OnInit, PLATFORM_ID, ViewChild, signal } from '@angular/core';
-import { Route, Router } from '@angular/router';
+import {Component, HostBinding, HostListener, Inject,  OnInit, PLATFORM_ID,  signal } from '@angular/core';
 import AOS from 'aos';
-// import * as AOS from 'aos';
 import 'aos/dist/aos.css';
-import { NgxTypedJsComponent } from 'ngx-typed-js';
-import { Subject, debounceTime } from 'rxjs';
-import { SharedService } from '../../service/shared.service';
-// import { Typewriter } from 'typewriter-effect';
+import { Subject} from 'rxjs';
+import { Meta } from '@angular/platform-browser';
 
 
 @Component({
@@ -42,7 +38,7 @@ export class HomePageComponent implements OnInit {
         <p style="color:#ffffff"><span style="color:#5918DF">return </span>&#91;</p>
         <p style="color:#ffffff">&#123;<span style="color:#24E394">'2021 : 2023'</span> : <span
                 style="color:#24E394">'Mumbai University- Master in Computer Applications'</span>&#125;,</p>
-        <p style="color:#ffffff">&#123;<span style="color:#24E394">'2028 : 2021'</span> : <span
+        <p style="color:#ffffff">&#123;<span style="color:#24E394">'2018 : 2021'</span> : <span
                 style="color:#24E394">'Mumbai University- Bachelor in Information Technology'</span>&#125;,</p>
         <p style="color:#ffffff">&#93;</p>
         <p style="color:#ffffff">&#125;</p>
@@ -59,8 +55,7 @@ export class HomePageComponent implements OnInit {
   isBrowser: boolean;
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
-    private route: Router,
-    private sharedService: SharedService
+    private meta: Meta
   ) {
     this.isBrowser = isPlatformBrowser(this.platformId);
   }
@@ -68,6 +63,24 @@ export class HomePageComponent implements OnInit {
   cssLoader = true;
   private scrollEvent = new Subject<void>();
   ngOnInit() {
+    this.meta.addTag({ name: 'Poonam Kumawat', content: 'Software Engineer' });
+    this.meta.addTag({
+      property: 'og:title',
+      content: 'Poonam Kumawat - Software Engineer',
+    });
+    this.meta.addTag({
+      property: 'og:description',
+      content: 'Profile of Poonam Kumawat, a passionate Software Engineer.',
+    });
+    this.meta.addTag({
+      property: 'og:image',
+      content:
+        'https://ik.imagekit.io/poonam/Screenshot%202024-05-17%20225248.png?updatedAt=1716489662811',
+    });
+    this.meta.addTag({
+      property: 'og:url',
+      content: 'https://poonam-kumawat.vercel.app',
+    });
     if (isPlatformBrowser(this.platformId)) {
       AOS.init();
       document.body.classList.add('loading');
@@ -77,9 +90,6 @@ export class HomePageComponent implements OnInit {
         document.body.classList.remove('loading');
       }, 2000);
     }
-    
-    
-    // AOS.refresh();
   }
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
@@ -98,14 +108,6 @@ export class HomePageComponent implements OnInit {
   }
   darkMode = signal<boolean>(false);
   @HostBinding('class.dark') get mode() {
-    
     return this.darkMode();
-  }
-  onResume() {
-    if (this.darkMode()) {
-      this.sharedService.downloadPdf();
-    } else {
-      this.route.navigate(['/resume']);
-    }
   }
 }
