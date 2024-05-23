@@ -8,6 +8,7 @@ import { ResumeComponent } from './component/resume/resume.component';
 import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 import { CssLoaderComponent } from './component/css-loader/css-loader.component';
 import { NgxTypedJsModule } from 'ngx-typed-js';
+import { AnimatedBgComponent } from './component/animated-bg/animated-bg.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { NgxTypedJsModule } from 'ngx-typed-js';
     HomePageComponent,
     ResumeComponent,
     CssLoaderComponent,
+    AnimatedBgComponent,
   ],
   imports: [
     BrowserModule,
