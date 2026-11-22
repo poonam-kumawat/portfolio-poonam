@@ -1,5 +1,6 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,7 +9,6 @@ import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 import { CssLoaderComponent } from './component/css-loader/css-loader.component';
 import { NgxTypedJsModule } from 'ngx-typed-js';
 import { AnimatedBgComponent } from './component/animated-bg/animated-bg.component';
-
 
 @NgModule({
   declarations: [
@@ -19,6 +19,7 @@ import { AnimatedBgComponent } from './component/animated-bg/animated-bg.compone
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     NgxExtendedPdfViewerModule,
     NgxTypedJsModule,
